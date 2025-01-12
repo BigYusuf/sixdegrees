@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import Logo from "@/assets/sixDegrees.webp";
 import SocialX from "@/assets/social-x.svg";
 import SocialLinkedIn from "@/assets/social-linkedin.svg";
 import SocialInsta from "@/assets/social-insta.svg";
@@ -17,8 +18,8 @@ const Footer = () => {
 
           <Image
             className="relative"
-            // src={Logo}
-            src="https://www.6dg.co.uk/wp-content/uploads/2023/08/3c9133b6e7684aeda1f1ec7dbc998d20-1.webp"
+            src={Logo}
+            // src="https://www.6dg.co.uk/wp-content/uploads/2023/08/3c9133b6e7684aeda1f1ec7dbc998d20-1.webp"
             height={80}
             width={80}
             alt="Logo"

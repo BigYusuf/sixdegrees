@@ -1,10 +1,10 @@
 "use client";
 
 // import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
-import Lottie from "react-lottie";
 // import { motion, useScroll, useTransform } from "framer-motion";
+import dynamic from "next/dynamic";
 
 import ArrowRight from "@/assets/arrow-right.svg";
 // import cogImage from "@/assets/cog.png";
@@ -12,49 +12,29 @@ import ArrowRight from "@/assets/arrow-right.svg";
 // import noodleImage from "@/assets/noodle.png";
 
 // import * as animationData from '@/assets/building.json'
-import animationData from "@/assets/building.json";
+// import animationData from "@/assets/building.json";
 // import shieldData from "@/assets/shield.json";
 // import lockData from "@/assets/P4s4UEnTrH.json";
-
+const LottieAnimation = dynamic(() => import("./animations/HeroAnimation"), {
+  ssr: false,
+});
 const Hero = () => {
   const heroRef = useRef(null);
+
   // const { scrollYProgress } = useScroll({
   //   target: heroRef,
   //   offset: ["start end", "end start"],
   // });
   // const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  // const shieldOptions = {
+  // const defaultOptions = {
   //   loop: true,
   //   autoplay: true,
-  //   animationData: shieldData,
+  //   animationData: animationData,
   //   rendererSettings: {
   //     preserveAspectRatio: "xMidYMid slice",
   //   },
   // };
-  // const lockOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: lockData,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  
 
   return (
     <section
@@ -109,15 +89,7 @@ const Hero = () => {
                 ease: "easeInOut",
               }}
             >
-              <Lottie
-                options={defaultOptions}
-                height={
-                  width > 760 ? 600 : width <= 760 && width > 450 ? 450 : 450
-                }
-                width={
-                  width > 760 ? 600 : width <= 760 && width > 450 ? 400 : 300
-                }
-              />
+              <LottieAnimation />
             </motion.div>
             {/* <motion.div
               style={{ translateY: translateY }}

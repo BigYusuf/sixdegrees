@@ -3,8 +3,11 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
+// import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 import ArrowRight from "@/assets/arrow-right.svg";
 import shieldData from "@/assets/shield.json";
 // import starImage from "@/assets/star.png";
@@ -37,9 +40,17 @@ const CallToAction = () => {
 
           <motion.div
             style={{ translateY: translateY }}
-            className="hidden md:block md:absolute -top-8 -left-32"
+            className="hidden md:block md:absolute w-[220px] h-[220px] -top-8 -left-32"
           >
-            <Lottie options={shieldOptions} height={220} width={220} />
+            <Lottie
+              // loop={true}
+              // autoplay={true}
+              // className="w-[220px] h-[220px]"
+              // animationData={shieldData}
+              options={shieldOptions}
+              height={220}
+              width={220}
+            />
           </motion.div>
 
           {/* <Image

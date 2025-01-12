@@ -27,7 +27,17 @@ const nextConfig = {
 
     return config;
   },
-
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.6dg.co.uk',
+        port: '',
+        pathname: '/wp-content/uploads/**',
+        search: '',
+      },
+    ],
+  },
   // ...other config
 };
 
