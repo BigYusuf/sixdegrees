@@ -7,8 +7,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 // import curve1 from "@/assets/collaboration/curve-1.svg";
-import CurveIcon1 from "@/assets/collaboration/curve-1.svg";
-import curve2 from "@/assets/collaboration/curve-2.svg";
+// import CurveIcon1 from "@/assets/collaboration/curve-1.svg";
+// import curve2 from "@/assets/collaboration/curve-2.svg";
 import figma from "@/assets/collaboration/figma.png";
 import framer from "@/assets/collaboration/framer.png";
 import notion from "@/assets/collaboration/notion.png";
@@ -94,28 +94,28 @@ const collabContent = [
   { id: 3, title: "Top-notch Security", desc: "" },
 ];
 
-export const RightCurve = () => {
-  return (
-    <div className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none xl:block">
-      <Image src={curve2} width={162} height={76} alt="Curve 2" />
-    </div>
-  );
-};
+//  const RightCurve = () => {
+//   return (
+//     <div className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none xl:block">
+//       <Image src={curve2} width={162} height={76} alt="Curve 2" />
+//     </div>
+//   );
+// };
 
-export const LeftCurve = () => {
-  return (
-    <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-10 pointer-events-none xl:block">
-      {/* <Image
-        src={curve1}
-        width={522}
-        height={182}
-        // className="bg-red-600"
-        alt="Curve 1"
-      /> */}
-      <CurveIcon1 className="text-red-600 bg-black" />
-    </div>
-  );
-};
+//  const LeftCurve = () => {
+//   return (
+//     <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-10 pointer-events-none xl:block">
+//       {/* <Image
+//         src={curve1}
+//         width={522}
+//         height={182}
+//         // className="bg-red-600"
+//         alt="Curve 1"
+//       /> */}
+//       <CurveIcon1 className="text-red-600 bg-black" />
+//     </div>
+//   );
+// };
 
 const Collaboration = () => {
   return (
@@ -201,7 +201,7 @@ const Collaboration = () => {
               )}
             </ul>
 
-            <LeftCurve />
+            {/* <LeftCurve /> */}
             {/* <RightCurve /> */}
           </div>
         </div>
