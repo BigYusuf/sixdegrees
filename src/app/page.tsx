@@ -9,7 +9,7 @@ import {
   LogoTicker,
   ProductShowcase,
   Testimonials,
-} from "@/sections";
+} from "@/components";
 
 export default function Home() {
   return (
