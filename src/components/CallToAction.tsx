@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
-import ArrowRight from "@/assets/arrow-right.svg";
+// import ArrowRight from "@/assets/arrow-right.svg";
 import shieldData from "@/assets/shield.json";
 // import starImage from "@/assets/star.png";
 // import springImage from "@/assets/spring.png";
@@ -72,7 +72,7 @@ const CallToAction = () => {
           <button className="btn btn-primary">Get Started</button>
           <button className="btn btn-text gap-1">
             <span>Learn More</span>
-            <ArrowRight className="h-5 w-5" />
+            {/* <ArrowRight className="h-5 w-5" /> */}
           </button>
         </div>
       </div>

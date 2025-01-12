@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "@/assets/sixDegrees.webp";
-import SocialX from "@/assets/social-x.svg";
-import SocialLinkedIn from "@/assets/social-linkedin.svg";
-import SocialInsta from "@/assets/social-insta.svg";
-import SocialPin from "@/assets/social-pin.svg";
-import SocialYoutube from "@/assets/social-youtube.svg";
+// import SocialX from "@/assets/social-x.svg";
+// import SocialLinkedIn from "@/assets/social-linkedin.svg";
+// import SocialInsta from "@/assets/social-insta.svg";
+// import SocialPin from "@/assets/social-pin.svg";
+// import SocialYoutube from "@/assets/social-youtube.svg";
 
 const Footer = () => {
   return (
@@ -35,13 +35,13 @@ const Footer = () => {
           <Link href={"/"}>Help</Link>
         </nav>
 
-        <div className="flex justify-center gap-6 mt-6">
+        {/* <div className="flex justify-center gap-6 mt-6">
           <SocialX />
           <SocialInsta />
           <SocialPin />
           <SocialLinkedIn />
           <SocialYoutube />
-        </div>
+        </div> */}
         <p className="mt-6">&copy; 2025 Six Degrees Inc, All rights reserved.</p>
       </div>
     </footer>
