@@ -7,9 +7,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
 
-const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+const LottieAnimation = dynamic(() => import("./animations/CallAnimation"), {
+  ssr: false,
+});
 // import ArrowRight from "@/assets/arrow-right.svg";
-import shieldData from "@/assets/shield.json";
+
 // import starImage from "@/assets/star.png";
 // import springImage from "@/assets/spring.png";
 
@@ -20,14 +22,7 @@ const CallToAction = () => {
     offset: ["start end", "end start"],
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
-  const shieldOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: shieldData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+
   return (
     <section className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
@@ -42,15 +37,7 @@ const CallToAction = () => {
             style={{ translateY: translateY }}
             className="hidden md:block md:absolute w-[220px] h-[220px] -top-8 -left-32"
           >
-            <Lottie
-              // loop={true}
-              // autoplay={true}
-              // className="w-[220px] h-[220px]"
-              // animationData={shieldData}
-              options={shieldOptions}
-              height={220}
-              width={220}
-            />
+            <LottieAnimation />
           </motion.div>
 
           {/* <Image

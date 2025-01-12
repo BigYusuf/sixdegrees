@@ -11,10 +11,6 @@ import dynamic from "next/dynamic";
 // import cylinderImage from "@/assets/cylinder.png";
 // import noodleImage from "@/assets/noodle.png";
 
-// import * as animationData from '@/assets/building.json'
-// import animationData from "@/assets/building.json";
-// import shieldData from "@/assets/shield.json";
-// import lockData from "@/assets/P4s4UEnTrH.json";
 const LottieAnimation = dynamic(() => import("./animations/HeroAnimation"), {
   ssr: false,
 });
