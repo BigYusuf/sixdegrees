@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg inline-flex justify-center items-center font-medium tracking-tight;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply bg-transparent text-black;
+  }
+  .logo-ticker-image {
+    @apply h-8 w-auto;
+  }
+  .tag {
+    @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 tracking-tight rounded-lg;
+  }
+  .title {
+    @apply mt-6 tracking-tighter font-bold bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
+  }
+
+  .desc {
+    @apply text-xl text-[#010D3E] tracking-tight mt-6;
+  }
+  .section-title {
+    @apply title text-center text-3xl md:text-[54px] md:leading-[60px] pb-2;
+  }
+  .section-desc {
+    @apply text-[22px] leading-[30px] text-center tracking-tight text-[#010D3E] mt-5;
+  }
+  .section-heading {
+    @apply max-w-[540px] mx-auto;
+  }
+  .card {
+    @apply border border-[#222222]/10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full p-10;
+  }
+  .body-1 {
+    @apply text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8;
+  }
+  .body-2 {
+    @apply font-light text-[0.875rem] leading-6 md:text-base;
+  }
+  .small-title {
+    @apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem];
+  }
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* color: var(--foreground); */
+  /* background: var(--background); */
+  background-color: #eaeefe;
+  font-family: Arial, Helvetica, sans-serif;
+}
