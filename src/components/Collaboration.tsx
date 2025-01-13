@@ -91,24 +91,6 @@ const collabContent = [
   { id: 3, title: "Top-notch Security", desc: "" },
 ];
 
- const RightCurve = () => {
-  return (
-    // <div className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none xl:block">
-    
-      <Curve2 className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none lg:block" />
-    // </div>
-  );
-};
-
-const LeftCurve = () => {
-  return (
-    // <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-10 pointer-events-none xl:block">
-
-    <Curve1 className="hidden absolute top-1/2 right-full w-[22.625rem] -mt-1 mr-10 pointer-events-none lg:block" />
-    // </div>
-  );
-};
-
 const Collaboration = () => {
   return (
     <section className="my-[3rem] overflow-x-clip">
@@ -194,8 +176,8 @@ const Collaboration = () => {
               )}
             </ul>
 
-            <LeftCurve />
-            <RightCurve />
+            <Curve1 className="hidden absolute top-1/2 right-full w-[22.625rem] -mt-1 mr-10 pointer-events-none lg:block" />
+            <Curve2 className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none lg:block" />
           </div>
         </div>
       </div>
