@@ -5,8 +5,8 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 // import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
+import { ArrowRight } from "@/utils/icons";
 
-// import ArrowRight from "@/assets/arrow-right.svg";
 // import cogImage from "@/assets/cog.png";
 // import cylinderImage from "@/assets/cylinder.png";
 // import noodleImage from "@/assets/noodle.png";
@@ -52,7 +52,7 @@ const Hero = () => {
               <button className="btn btn-primary">Start Now</button>
               <button className="btn btn-text gap-1">
                 <span>Learn More</span>
-                {/* <ArrowRight className="h-5 w-5" /> */}
+                <ArrowRight className="h-5 w-5" />
               </button>
             </div>
           </div>

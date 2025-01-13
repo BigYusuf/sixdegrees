@@ -6,11 +6,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // import Lottie from "react-lottie";
 // import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
+import { ArrowRight } from "@/utils/icons";
 
 const LottieAnimation = dynamic(() => import("./animations/CallAnimation"), {
   ssr: false,
 });
-// import ArrowRight from "@/assets/arrow-right.svg";
 
 // import starImage from "@/assets/star.png";
 // import springImage from "@/assets/spring.png";
@@ -59,7 +59,7 @@ const CallToAction = () => {
           <button className="btn btn-primary">Get Started</button>
           <button className="btn btn-text gap-1">
             <span>Learn More</span>
-            {/* <ArrowRight className="h-5 w-5" /> */}
+            <ArrowRight className="h-5 w-5" />
           </button>
         </div>
       </div>

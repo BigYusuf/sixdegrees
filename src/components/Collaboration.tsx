@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React from "react";
-// import CheckedIcon from "@/assets/checked.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -17,6 +16,7 @@ import slack from "@/assets/collaboration/slack.png";
 import photoshop from "@/assets/collaboration/photoshop.png";
 import protopie from "@/assets/collaboration/protopie.png";
 import raindrop from "@/assets/collaboration/raindrop.png";
+import { CheckedIcon } from "@/utils/icons";
 
 const collabApps = [
   {
@@ -130,7 +130,7 @@ const Collaboration = () => {
               (item: { id: number; title: string; desc?: string }) => (
                 <li className="mb-3 py-3" key={item?.id}>
                   <div className="flex items-center">
-                    {/* <CheckedIcon className="w-6 h-6" /> */}
+                    <CheckedIcon className="w-6 h-6" />
                     <h6 className="body-2 ml-5 font-medium">{item?.title}</h6>
                   </div>
                   {item?.desc !== "" && (
