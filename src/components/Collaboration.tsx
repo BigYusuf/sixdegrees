@@ -5,9 +5,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// import curve1 from "@/assets/collaboration/curve-1.svg";
-// import CurveIcon1 from "@/assets/collaboration/curve-1.svg";
-// import curve2 from "@/assets/collaboration/curve-2.svg";
 import figma from "@/assets/collaboration/figma.png";
 import framer from "@/assets/collaboration/framer.png";
 import notion from "@/assets/collaboration/notion.png";
@@ -16,7 +13,7 @@ import slack from "@/assets/collaboration/slack.png";
 import photoshop from "@/assets/collaboration/photoshop.png";
 import protopie from "@/assets/collaboration/protopie.png";
 import raindrop from "@/assets/collaboration/raindrop.png";
-import { CheckedIcon } from "@/utils/icons";
+import { CheckedIcon, Curve1, Curve2 } from "@/utils/icons";
 
 const collabApps = [
   {
@@ -94,32 +91,27 @@ const collabContent = [
   { id: 3, title: "Top-notch Security", desc: "" },
 ];
 
-//  const RightCurve = () => {
-//   return (
-//     <div className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none xl:block">
-//       <Image src={curve2} width={162} height={76} alt="Curve 2" />
-//     </div>
-//   );
-// };
+ const RightCurve = () => {
+  return (
+    // <div className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none xl:block">
+    
+      <Curve2 className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-1 ml-10 pointer-events-none lg:block" />
+    // </div>
+  );
+};
 
-//  const LeftCurve = () => {
-//   return (
-//     <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-10 pointer-events-none xl:block">
-//       {/* <Image
-//         src={curve1}
-//         width={522}
-//         height={182}
-//         // className="bg-red-600"
-//         alt="Curve 1"
-//       /> */}
-//       <CurveIcon1 className="text-red-600 bg-black" />
-//     </div>
-//   );
-// };
+const LeftCurve = () => {
+  return (
+    // <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-10 pointer-events-none xl:block">
+
+    <Curve1 className="hidden absolute top-1/2 right-full w-[22.625rem] -mt-1 mr-10 pointer-events-none lg:block" />
+    // </div>
+  );
+};
 
 const Collaboration = () => {
   return (
-    <section className="my-[3rem]">
+    <section className="my-[3rem] overflow-x-clip">
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="title text-xl md:text-3xl mb-4 md:mb-8">
@@ -143,8 +135,8 @@ const Collaboration = () => {
           <button className="btn btn-primary">Get started</button>
         </div>
 
-        <div className="lg:ml-auto lg:w-[38rem] mt-4">
-          <p className="body-2 mb-4 font-medium text-neutral-600 md:mb-16 lg:mb-16 lg:w-[22rem] lg:mx-auto">
+        <div className="lg:ml-auto lg:w-[38rem] mt-8 md:mt-4">
+          <p className="body-2 mb-10 font-medium text-neutral-600 md:mb-16 lg:mb-16 lg:w-[22rem] lg:mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             sint consectetur
           </p>
@@ -202,8 +194,8 @@ const Collaboration = () => {
               )}
             </ul>
 
-            {/* <LeftCurve /> */}
-            {/* <RightCurve /> */}
+            <LeftCurve />
+            <RightCurve />
           </div>
         </div>
       </div>

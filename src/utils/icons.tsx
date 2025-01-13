@@ -46,34 +46,34 @@ export const CheckedIcon = (props: SVGProps<SVGSVGElement>) => (
 );
 export const SocialInsta = (props: SVGProps<SVGSVGElement>) => (
   <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width={24}
-  height={24}
-  fill="none"
-  {...props}
->
-  <path
-    fill="currentColor"
-    d="M17 2.25H8A5.256 5.256 0 0 0 2.75 7.5v9A5.256 5.256 0 0 0 8 21.75h9a5.256 5.256 0 0 0 5.25-5.25v-9A5.256 5.256 0 0 0 17 2.25ZM12.5 16.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Zm5.625-9a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM15.5 12a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-  />
-</svg>
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M17 2.25H8A5.256 5.256 0 0 0 2.75 7.5v9A5.256 5.256 0 0 0 8 21.75h9a5.256 5.256 0 0 0 5.25-5.25v-9A5.256 5.256 0 0 0 17 2.25ZM12.5 16.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Zm5.625-9a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM15.5 12a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+    />
+  </svg>
 );
 export const SocialX = (props: SVGProps<SVGSVGElement>) => (
   <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width={24}
-  height={24}
-  fill="none"
-  {...props}
->
-  <path
-    fill="currentColor"
-    d="M17.141 5h2.454l-5.36 5.93L20.541 19h-4.938l-3.867-4.894L7.311 19H4.856l5.734-6.343L4.541 5h5.062l3.496 4.474L17.141 5Z"
-  />
-</svg>
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M17.141 5h2.454l-5.36 5.93L20.541 19h-4.938l-3.867-4.894L7.311 19H4.856l5.734-6.343L4.541 5h5.062l3.496 4.474L17.141 5Z"
+    />
+  </svg>
 );
 export const SocialPin = (props: SVGProps<SVGSVGElement>) => (
-<svg
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
     height={24}
@@ -87,7 +87,7 @@ export const SocialPin = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 export const SocialLinkedIn = (props: SVGProps<SVGSVGElement>) => (
-<svg
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
     height={24}
@@ -102,15 +102,43 @@ export const SocialLinkedIn = (props: SVGProps<SVGSVGElement>) => (
 );
 export const SocialYoutube = (props: SVGProps<SVGSVGElement>) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M22.468 6.518A2.25 2.25 0 0 0 21.11 4.98c-3.214-1.241-8.329-1.23-8.61-1.23-.281 0-5.396-.011-8.61 1.23a2.25 2.25 0 0 0-1.358 1.537C2.289 7.454 2 9.163 2 12c0 2.837.289 4.547.532 5.483A2.25 2.25 0 0 0 3.89 19.02c3.079 1.188 7.897 1.229 8.548 1.229h.124c.65 0 5.472-.041 8.548-1.23a2.25 2.25 0 0 0 1.358-1.537c.243-.938.532-2.646.532-5.483 0-2.837-.289-4.547-.532-5.482Zm-6.76 5.794-4.5 3a.375.375 0 0 1-.583-.312V9a.376.376 0 0 1 .583-.312l4.5 3a.375.375 0 0 1 0 .624Z"
+    />
+  </svg>
+);
+export const Curve1 = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={522}
+    height={182}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="#252134"
+      d="M.333 179a2.667 2.667 0 1 0 5.334 0 2.667 2.667 0 0 0-5.334 0ZM517 3.5l5 2.387V.113L517 2.5v1ZM3 179.5h128.782v-1H3v1ZM212.282 99V83h-1v16h1Zm79.5-95.5H517.5v-1H291.782v1Zm-79.5 79.5c0-43.907 35.593-79.5 79.5-79.5v-1c-44.459 0-80.5 36.041-80.5 80.5h1Zm-80.5 96.5c44.459 0 80.5-36.041 80.5-80.5h-1c0 43.907-35.594 79.5-79.5 79.5v1Z"
+    />
+  </svg>
+);
+export const Curve2 = (props: SVGProps<SVGSVGElement>) => (
+  <svg
   xmlns="http://www.w3.org/2000/svg"
-  width={24}
-  height={24}
+  width={162}
+  height={76}
   fill="none"
   {...props}
 >
   <path
-    fill="currentColor"
-    d="M22.468 6.518A2.25 2.25 0 0 0 21.11 4.98c-3.214-1.241-8.329-1.23-8.61-1.23-.281 0-5.396-.011-8.61 1.23a2.25 2.25 0 0 0-1.358 1.537C2.289 7.454 2 9.163 2 12c0 2.837.289 4.547.532 5.483A2.25 2.25 0 0 0 3.89 19.02c3.079 1.188 7.897 1.229 8.548 1.229h.124c.65 0 5.472-.041 8.548-1.23a2.25 2.25 0 0 0 1.358-1.537c.243-.938.532-2.646.532-5.483 0-2.837-.289-4.547-.532-5.482Zm-6.76 5.794-4.5 3a.375.375 0 0 1-.583-.312V9a.376.376 0 0 1 .583-.312l4.5 3a.375.375 0 0 1 0 .624Z"
+    fill="#252134"
+    d="M.333 3a2.667 2.667 0 1 1 5.334 0A2.667 2.667 0 0 1 .333 3ZM157 72.5l5-2.387v5.774l-5-2.387v-1ZM84.56 38a2.667 2.667 0 1 1 5.334 0 2.667 2.667 0 0 1-5.333 0ZM3 2.5h49.227v1H3v-1Zm119.227 70H157.5v1h-35.273v-1ZM87.727 38c0 19.054 15.446 34.5 34.5 34.5v1c-19.606 0-35.5-15.894-35.5-35.5h1Zm-35.5-35.5c19.606 0 35.5 15.894 35.5 35.5h-1c0-19.054-15.446-34.5-34.5-34.5v-1Z"
   />
 </svg>
 );
