@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
 @layer components {
   .btn {
     @apply px-4 py-2 rounded-lg inline-flex justify-center items-center font-medium tracking-tight;
@@ -13,7 +19,7 @@
     @apply bg-transparent text-black;
   }
   .logo-ticker-image {
-    @apply h-8 w-auto;
+    @apply h-8 w-auto min-w-4;
   }
   .tag {
     @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 tracking-tight rounded-lg;
@@ -46,11 +52,98 @@
   .small-title {
     @apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem];
   }
+  .sub-menu {
+    @apply absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] backdrop-blur bg-white/[0.04];
+  }
+  .active-resource {
+    @apply p-4 bg-blue-400 text-white font-bold rounded-3xl cursor-pointer;
+  }
+  .inactive-resource {
+    @apply p-4 font-bold text-black/60 rounded-3xl cursor-pointer;
+  }
 }
+@layer utilities {
+  .flex-center {
+    @apply flex items-center;
+  }
+  .flex-center-between {
+    @apply flex items-center justify-between;
+  }
+  /* Act as a border */
+  .card-wrapper {
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-blue-100 to-blue-200;
+  }
 
+  /* Gradient */
+  /* Gradient */
+  .card-wrapper::before {
+    background: conic-gradient(
+      /* rgba(244, 114, 182, 0.4) 0deg, */ #f4f07266 0deg,
+      rgba(230, 78, 36, 0.61) 0deg,
+      transparent 80deg
+    );
+
+    @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-border-spin content-[''];
+  }
+
+  /* Body */
+  .card-content {
+    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-transparent bg-gradient-to-b from-blue-200 to-gray-300;
+  }
+}
 body {
   /* color: var(--foreground); */
   /* background: var(--background); */
   background-color: #eaeefe;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiperRootContainer {
+  width: 900px;
+  height: 600px;
+  overflow-x: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.swiperItemsContainer {
+  margin-left: 9px;
+  display: flex;
+  height: 100%;
+  width: max-content;
+}
+
+.swiperItem {
+  /* width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; */
+}
+
+.leftArrow,
+.RightArrow {
+  position: absolute;
+  background-color: white;
+  top: 49%;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 26px;
+  border-radius: 15px;
+}
+
+.leftArrow {
+  left: -100px;
+}
+
+.RightArrow {
+  right: -100px;
+}
+
+.swiperRootContainer::-webkit-scrollbar {
+  display: none;
 }

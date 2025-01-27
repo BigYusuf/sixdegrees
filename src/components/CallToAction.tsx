@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // import Lottie from "react-lottie";
 // import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
-import { ArrowRight } from "@/utils/icons";
+// import { ArrowRight } from "@/utils/icons";
 
 const LottieAnimation = dynamic(() => import("./animations/CallAnimation"), {
   ssr: false,
@@ -27,10 +27,10 @@ const CallToAction = () => {
     <section className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
         <div className="section-heading relative">
-          <h2 className="section-title">Let&apos;s hear from you</h2>
+          <h2 className="section-title">Ready to Get Started?</h2>
           <p className="section-desc">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            mollitia quis
+            Take the next step toward seamless cloud integration. Let’s make
+            your cloud journey a success!
           </p>
 
           <motion.div
@@ -57,10 +57,10 @@ const CallToAction = () => {
         </div>
         <div className="flex gap-2 mt-10 justify-center items-center">
           <button className="btn btn-primary">Get Started</button>
-          <button className="btn btn-text gap-1">
+          {/* <button className="btn btn-text gap-1">
             <span>Learn More</span>
             <ArrowRight className="h-5 w-5" />
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

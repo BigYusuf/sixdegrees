@@ -1,9 +1,12 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+// import React, { ReactElement } from "react";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+import { CircleCheck } from "lucide-react";
 
 import figma from "@/assets/collaboration/figma.png";
 import framer from "@/assets/collaboration/framer.png";
@@ -13,7 +16,9 @@ import slack from "@/assets/collaboration/slack.png";
 import photoshop from "@/assets/collaboration/photoshop.png";
 import protopie from "@/assets/collaboration/protopie.png";
 import raindrop from "@/assets/collaboration/raindrop.png";
-import { CheckedIcon, Curve1, Curve2 } from "@/utils/icons";
+import { Curve1, Curve2 } from "@/utils/icons";
+// import Link from "next/link";
+// import { ChevronRight, CloudCog, Cloudy, Database } from "lucide-react";
 
 const collabApps = [
   {
@@ -90,10 +95,126 @@ const collabContent = [
   { id: 2, title: "Smart Automation", desc: "" },
   { id: 3, title: "Top-notch Security", desc: "" },
 ];
+const collabContent1 = [
+  {
+    id: 1,
+    title: "Modernized and Maximized",
+  },
+  { id: 2, title: "Take control", desc: "" },
+  { id: 3, title: "Unleash Unlimited Potential", desc: "" },
+];
+const collabContent2 = [
+  {
+    id: 1,
+    title: "Gain insight",
+  },
+  { id: 2, title: "Direct Your Business", desc: "" },
+  { id: 3, title: "Proactively defend and respond", desc: "" },
+];
+// Gain insight
+// Direct Your Business
+// Proactively defend and respond
+
+const CollabAnimation1 = dynamic(
+  () => import("./animations/CollabAnimation1"),
+  {
+    ssr: false,
+  }
+);
+const CollabAnimation2 = dynamic(
+  () => import("./animations/CollabAnimation2"),
+  {
+    ssr: false,
+  }
+);
 
 const Collaboration = () => {
   return (
     <section className="my-[3rem] overflow-x-clip">
+      <div className="container">
+        <div className="max-w-[540px] mx-auto">
+          <div className="flex justify-center flex-col items-center gap-2">
+            <div className="tag">Why we are the best</div>
+            <h2 className="section-title">How We Do It</h2>
+
+            <p className="section-desc">
+              Transforming complex cloud solutions into simple ones. we focus on
+              making cloud technology more accessible and user-friendly.
+            </p>
+          </div>
+        </div>
+        <div className="relative mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 "></div>
+        </div>
+      </div>
+      <div className="container lg:flex">
+        <div className="max-w-[25rem]">
+          <h2 className="title text-xl md:text-3xl mb-4 md:mb-8">
+            Assured and Optimized Cloud Solutions
+          </h2>
+          <p className="body-2 my-3 text-neutral-500">
+            Gain confidence in your cloud direction and achieve accelerated time
+            to value through our assured and optimised cloud services.
+          </p>
+          <ul className="max-w-[22rem] mb-10 md:mb-14">
+            {collabContent1?.map(
+              (item: { id: number; title: string; desc?: string }) => (
+                <li className="mb-3 py-3" key={item?.id}>
+                  <div className="flex items-center">
+                    <CircleCheck className="w-6 h-6 rounded-full text-blue-500" />
+                    <h6 className="body-2 ml-5 font-medium">{item?.title}</h6>
+                  </div>
+                  {item?.desc !== "" && (
+                    <p className="body-2 mt-3 text-neutral-500">{item?.desc}</p>
+                  )}
+                </li>
+              )
+            )}
+          </ul>
+          <button className="btn btn-primary">Get started</button>
+        </div>
+
+        <div className="lg:ml-auto lg:w-[38rem] mt-8 md:mt-4">
+          {/* <p className="body-2 mb-10 font-medium text-neutral-600 md:mb-16 lg:mb-16 lg:w-[22rem] lg:mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            sint consectetur
+          </p> */}
+
+          {/* <div className="relative items-center justify-center left-1/2 flex w-[22rem] aspect-square border border-black/60 rounded-full -translate-x-1/2 scale:75 md:scale-100"> */}
+          <CollabAnimation1 />
+          {/* </div> */}
+        </div>
+      </div>
+      <div className="container my-10 lg:my-20 lg:flex">
+        <div className="lg:mx-auto lg:w-1/2 mt-8 md:mt-4">
+          <CollabAnimation2 />
+        </div>
+        <div className=" lg:w-1/2">
+          <h2 className="title text-xl md:text-3xl mb-4 md:mb-8">
+            Intelligence-Led Security
+          </h2>
+          <p className="body-2 my-3 text-neutral-500">
+            Master today’s complex threat landscape and protect your business
+            with our intelligence-led security services.
+          </p>
+          <ul className="max-w-[22rem] mb-10 md:mb-14">
+            {collabContent2?.map(
+              (item: { id: number; title: string; desc?: string }) => (
+                <li className="mb-3 py-3" key={item?.id}>
+                  <div className="flex items-center">
+                    <CircleCheck className="w-6 h-6 rounded-full text-blue-500" />
+                    <h6 className="body-2 ml-5 font-medium">{item?.title}</h6>
+                  </div>
+                  {item?.desc !== "" && (
+                    <p className="body-2 mt-3 text-neutral-500">{item?.desc}</p>
+                  )}
+                </li>
+              )
+            )}
+          </ul>
+          <button className="btn btn-primary">Get started</button>
+        </div>
+      </div>
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="title text-xl md:text-3xl mb-4 md:mb-8">
@@ -104,7 +225,7 @@ const Collaboration = () => {
               (item: { id: number; title: string; desc?: string }) => (
                 <li className="mb-3 py-3" key={item?.id}>
                   <div className="flex items-center">
-                    <CheckedIcon className="w-6 h-6" />
+                    <CircleCheck className="w-6 h-6 rounded-full text-blue-500" />
                     <h6 className="body-2 ml-5 font-medium">{item?.title}</h6>
                   </div>
                   {item?.desc !== "" && (

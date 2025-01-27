@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 import productImage from "@/assets/product-image.png";
@@ -11,9 +12,7 @@ const ProductShowcase = () => {
         <div className="max-w-[540px] mx-auto">
           <div className="flex justify-center flex-col items-center gap-2">
             <div className="tag">Unbreakable Security</div>
-            <h2 className="section-title">
-              Manage Cloud Seamlessly
-            </h2>
+            <h2 className="section-title">Manage Cloud Seamlessly</h2>
 
             <p className="section-desc">
               We empower UK organizations to thrive in the cloud with secure
