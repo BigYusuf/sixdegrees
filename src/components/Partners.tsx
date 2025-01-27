@@ -6,7 +6,7 @@ import React from "react";
 // import Image from "next/image";
 // import { motion } from "framer-motion";
 
-import { Amazon, GCloud, Microsoft } from "@/utils/icons";
+import { Amazon, Fortnite, GCloud, Lacoste, Microsoft, Motul, Yanbal } from "@/utils/icons";
 
 const Partners = () => {
   return (
@@ -60,7 +60,7 @@ const Partners = () => {
           </div>
           <div className="flex items-end gap-4 justify-end">
             <div className="p-5 shadow-xl rounded-lg w-auto max-w-[150px] hover:bg-white cursor-pointer">
-              <Microsoft className="w-full h-5" />
+              <Fortnite className="w-full h-5" />
             </div>
             <div className="p-5 shadow-xl rounded-lg w-auto max-w-[150px] hover:bg-white cursor-pointer">
               <GCloud className="w-full h-5" />
@@ -72,16 +72,16 @@ const Partners = () => {
 
           <div className="flex items-end gap-4 justify-end">
             <div className="p-5 shadow-xl rounded-lg w-auto max-w-[150px] hover:bg-white cursor-pointer">
-              <Microsoft className="w-full h-5" />
+              <Motul className="w-full h-5" />
             </div>
             <div className="p-5 shadow-xl rounded-lg w-auto max-w-[150px] hover:bg-white cursor-pointer">
               <GCloud className="w-full h-5" />
             </div>
             <div className="p-5 shadow-xl rounded-lg w-auto max-w-[150px] hover:bg-white cursor-pointer">
-              <Amazon className="w-full h-5" />
+              <Lacoste className="w-full h-5" />
             </div>
             <div className="p-5 shadow-xl rounded-lg w-auto max-w-[150px] hover:bg-white cursor-pointer">
-              <Amazon className="w-full h-5" />
+              <Yanbal className="w-full h-5" />
             </div>
           </div>
 
