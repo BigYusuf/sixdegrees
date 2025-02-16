@@ -6,7 +6,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, CloudLightning } from "lucide-react";
 
 import figma from "@/assets/collaboration/figma.png";
 import framer from "@/assets/collaboration/framer.png";
@@ -17,6 +17,7 @@ import photoshop from "@/assets/collaboration/photoshop.png";
 import protopie from "@/assets/collaboration/protopie.png";
 import raindrop from "@/assets/collaboration/raindrop.png";
 import { Curve1, Curve2 } from "@/utils/icons";
+import LogoText from "./LogoText";
 // import Link from "next/link";
 // import { ChevronRight, CloudCog, Cloudy, Database } from "lucide-react";
 
@@ -86,6 +87,7 @@ const collabApps = [
     pos: 315,
   },
 ];
+
 const collabContent = [
   {
     id: 1,
@@ -98,18 +100,27 @@ const collabContent = [
 const collabContent1 = [
   {
     id: 1,
-    title: "Modernized and Maximized",
+    title: "Modernized and Custom",
   },
-  { id: 2, title: "Take control", desc: "" },
-  { id: 3, title: "Unleash Unlimited Potential", desc: "" },
+  { id: 2, title: "Proven Expertise", desc: "" },
+  { id: 3, title: "24/7 Support", desc: "" },
 ];
 const collabContent2 = [
   {
     id: 1,
-    title: "Gain insight",
+    title: "Scalability",desc:""
+    // desc: "Our services scale with your business growth, offering flexibility and future-proof solutions.",
   },
-  { id: 2, title: "Direct Your Business", desc: "" },
-  { id: 3, title: "Proactively defend and respond", desc: "" },
+  {
+    id: 2,
+    title: "Cost-Efficiency",
+    // desc: "Optimize your IT budget with a combination of on-demand, managed, and hybrid services.",
+  },
+  {
+    id: 3,
+    title: "Proactively defend and respond",
+    // desc: "Protect your data, assets, and infrastructure from evolving cyber threats.",
+  },
 ];
 // Gain insight
 // Direct Your Business
@@ -135,11 +146,18 @@ const Collaboration = () => {
         <div className="max-w-[540px] mx-auto">
           <div className="flex justify-center flex-col items-center gap-2">
             <div className="tag">Why we are the best</div>
-            <h2 className="section-title">How We Do It</h2>
-
-            <p className="section-desc">
+            <div className="flex items-center justify-center gap-2">
+              <h2 className="section-title">Why Choose HybriD </h2>{" "}
+              <CloudLightning className="text-yellow-400 w-8 h-8 lg:w-16 lg:h-16 " />
+            </div>
+            {/* <p className="section-desc">
               Transforming complex cloud solutions into simple ones. we focus on
               making cloud technology more accessible and user-friendly.
+            </p> */}
+
+            <p className="section-desc">
+              Every business is unique. Let&apos;s work to design and implement
+              custom IT solutions that match their specific needs and goals.
             </p>
           </div>
         </div>
@@ -150,12 +168,16 @@ const Collaboration = () => {
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="title text-xl md:text-3xl mb-4 md:mb-8">
-            Assured and Optimized Cloud Solutions
+            Tailored and Optimized Cloud Solutions
           </h2>
           <p className="body-2 my-3 text-neutral-500">
+            Our team works closely with you to design and implement custom IT
+            solutions that match their specific needs and goals.
+          </p>
+          {/* <p className="body-2 my-3 text-neutral-500">
             Gain confidence in your cloud direction and achieve accelerated time
             to value through our assured and optimised cloud services.
-          </p>
+          </p> */}
           <ul className="max-w-[22rem] mb-10 md:mb-14">
             {collabContent1?.map(
               (item: { id: number; title: string; desc?: string }) => (
@@ -191,11 +213,15 @@ const Collaboration = () => {
         </div>
         <div className=" lg:w-1/2">
           <h2 className="title text-xl md:text-3xl mb-4 md:mb-8">
-            Intelligence-Led Security
+            Unbreakable & Scalable Security
           </h2>
-          <p className="body-2 my-3 text-neutral-500">
+          {/* <p className="body-2 my-3 text-neutral-500">
             Master today’s complex threat landscape and protect your business
             with our intelligence-led security services.
+          </p> */}
+          <p className="body-2 my-3 text-neutral-500">
+            Security is at the heart of everything we do. We protect your data,
+            assets, and infrastructure from evolving cyber threats.
           </p>
           <ul className="max-w-[22rem] mb-10 md:mb-14">
             {collabContent2?.map(
@@ -240,21 +266,23 @@ const Collaboration = () => {
 
         <div className="lg:ml-auto lg:w-[38rem] mt-8 md:mt-4">
           <p className="body-2 mb-10 font-medium text-neutral-600 md:mb-16 lg:mb-16 lg:w-[22rem] lg:mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            sint consectetur
+            As technology evolves, so do we. We provide regular updates, new
+            solutions, and proactive recommendations to ensure your business
+            stays competitive and secure.
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-black/60 rounded-full -translate-x-1/2 scale:75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-black/60 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-[#0E0C15] rounded-full">
-                  <Image
+                  {/* <Image
                     src="https://www.6dg.co.uk/wp-content/uploads/2023/08/3c9133b6e7684aeda1f1ec7dbc998d20-1.webp"
                     width={60}
                     height={60}
                     className="w-auto h-auto"
                     alt="logo"
-                  />
+                  /> */}
+                  <LogoText />
                 </div>
               </div>
             </div>

@@ -237,7 +237,7 @@ const Resources = () => {
               step-by-step tutorials, and best practices, helping teams navigate
               the complexities of integrating various cloud platforms.
             </p>
-            <div className="mt-6 shadow-xl flex flex-row items-center gap-2 md:gap-4 border-[#ccc] border-[1px] rounded-3xl">
+            <div className="mt-6 p-2 shadow-xl flex flex-row items-center gap-2 md:gap-4 border-[#ccc] border-[1px] rounded-3xl">
               {resourceHeaders?.map((item: { name: string; id: number }) => (
                 <div
                   key={item?.id}

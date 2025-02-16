@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 import { ArrowRight, MenuIcon } from "@/utils/icons";
@@ -15,13 +15,13 @@ import {
   ArrowBigLeftDash,
   ChevronDown,
   Fingerprint,
-  // Phone,
   PieChart,
-  // PlayCircle,
   SquareSlash,
   TextCursorIcon,
 } from "lucide-react";
-import Logo from "@/assets/sixDegrees.webp";
+import LogoText from "./LogoText";
+// import Logo from "@/assets/Logo.png";
+
 const products = [
   {
     name: "Analytics",
@@ -75,13 +75,14 @@ const Header = () => {
       <div className="py-5 bg-transparent">
         <div className="container">
           <div className="flex items-center justify-between">
-            <Image
+            {/* <Image
               src={Logo}
               // src="https://www.6dg.co.uk/wp-content/uploads/2023/08/3c9133b6e7684aeda1f1ec7dbc998d20-1.webp"
               alt="Logo"
               height={80}
               width={80}
-            />
+              /> */}
+          <LogoText />
             <MenuIcon className="h-5 w-5 md:hidden" />
 
             <PopoverGroup className="hidden md:flex gap-6 text-black/60 items-center">

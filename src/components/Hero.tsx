@@ -40,13 +40,13 @@ const Hero = () => {
       <div className="container">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
-            <div className="tag">Six degrees</div>
+            <div className="tag">Hybrid Cloud</div>
             <h1 className="title text-5xl md:text-7xl">
               Secure Cloud Solutions
             </h1>
             <p className="desc">
-              We empower UK organizations to thrive in the cloud with secure
-              platforms for innovation and growth.
+            We deliver top-tier services that combine the best of cloud, on-premise, and hybrid environments, providing a seamless experience for organizations of all sizes.
+
             </p>
             <div className="flex items-center gap-1 mt-[30px]">
               <button className="btn btn-primary">Start Now</button>

@@ -38,9 +38,9 @@ export default function Home() {
         <ProductShow />
         {/* <WorkDone /> */}
         <Collaboration />
+        <Partners />
         <Resources />
         <Testimonials />
-        <Partners />
 
         <CallToAction />
 
