@@ -146,9 +146,9 @@ const Collaboration = () => {
         <div className="max-w-[540px] mx-auto">
           <div className="flex justify-center flex-col items-center gap-2">
             <div className="tag">Why we are the best</div>
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-row items-center justify-center gap-2">
               <h2 className="section-title">Why Choose HybriD </h2>{" "}
-              <CloudLightning className="text-yellow-400 w-8 h-8 lg:w-16 lg:h-16 " />
+              <CloudLightning className="text-yellow-400 w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 " />
             </div>
             {/* <p className="section-desc">
               Transforming complex cloud solutions into simple ones. we focus on

@@ -48,12 +48,12 @@ const Resources = () => {
   }) => {
     return (
       <div
-        className={`hover:card-wrapper border border-[#ccc] hover:border-transparent flex rounded-3xl w-[320px] min-h-[280px] cursor-pointer hover:bg-green-300 backdrop-filter backdrop-blur-sm bg-opacity-10 hover:backdrop-blur-sm hover:bg-opacity-10 shadow-lg`}
+        className={`hover:card-wrapper border border-[#ccc] flex rounded-3xl min-w-[300px] md:min-w-[320px] min-h-[280px] cursor-pointer backdrop-filter backdrop-blur-sm shadow-lg`}
       >
-        <div className="p-8 hover:card-content">
+        <div className="p-4 md:p-8 hover:card-content">
           <div className="flex h-full flex-col gap-2">
             <div className="flex items-start flex-col mb-3 gap-2">
-              <div className="w-full h-[250px] mr-3 inline-flex items-center justify-center rounded-full text-white flex-shrink-0">
+              <div className="w-full h-[250px] md:mr-3 inline-flex items-center justify-center rounded-full text-white flex-shrink-0">
                 {/* <Image src ={img} alt ="text"/> */}
                 {/* <Slider1 /> */}
               </div>
@@ -280,7 +280,7 @@ const Resources = () => {
             </div>
             <ArrowsSlider prevSlide={btnPressPrev} nextSlide={btnPressNext} />
           </div>
-        </div>{" "}
+        </div>
       </div>
     </section>
   );
